@@ -43,12 +43,16 @@ Imbox consists of two applications: [imbox-client](https://github.com/jaiyalas/i
 			> mysql -u userid -p [-h localhost]
 			> create database [group2_db];
 			> mysql -u userid -p [-h localhost] group2_db < group2_db.sql > 
-
+	
+	Note:  The server now runs on 8080 port, if you need to change it, please look at org.imbox.server.main.Imboxserver.
+		   The server now connects to localhost DB with default account and password, pleas change it at org.imbox.database.db_connect.
 ### Client
 
     > git clone https://github.com/jaiyalas/imbox-client.git
     > cd imbox-client/client
     > mvn clean compile assembly:single
+	
+	Note:  the client currently connects to localhost:8080. If you are not using these settings, please change it at org.imbox.client.network.ultility.Simpleconnection
 
 ## SYNOPSIS:
 
